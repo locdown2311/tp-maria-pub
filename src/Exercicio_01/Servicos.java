@@ -26,7 +26,7 @@ public class Servicos {
             else
                 System.out.println("Manicure invalida!\n");
         } while (manicure != 0);
-        System.out.println("\nFaturamento das manicures:\n");
+        System.out.println("\nFaturamento das manicures.:\n");
         for (int i=0; i<5; i++) {
             soma = servicos[i][0] * X1;
             soma += servicos[i][1] * X2;
