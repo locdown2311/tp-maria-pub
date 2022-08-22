@@ -57,6 +57,7 @@ public class Invoice {
 
 
 
+
     public double getInvoiceAmount() {
         return getQuantidade() * getPreco();
     }
