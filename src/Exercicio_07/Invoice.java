@@ -55,9 +55,6 @@ public class Invoice {
             this.quantidade = quantity;
     }
 
-
-
-
     public double getInvoiceAmount() {
         return getQuantidade() * getPreco();
     }
