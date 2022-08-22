@@ -21,12 +21,12 @@ public class Servicos {
                 if (servico >= 1 && servico <= 3)
                     servicos[manicure-1][servico-1]++;
                 else
-                    System.out.println("Servico invalido!\n");
+                    System.out.println("Servico invalido!");
             }
             else
-                System.out.println("Manicure invalida!\n");
+                System.out.println("Manicure invalida!");
         } while (manicure != 0);
-        System.out.println("\nFaturamento das manicures.:\n");
+        System.out.println("Faturamento das manicures.:");
         for (int i=0; i<5; i++) {
             soma = servicos[i][0] * X1;
             soma += servicos[i][1] * X2;

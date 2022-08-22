@@ -20,31 +20,31 @@ public class MainFloricultura {
         for(int i = 0; i < TAMANHO; i++)
         {
 
-            System.out.println("Entre com o nome da "+  i+1 + " Planta:\n");
+            System.out.println("Entre com o nome da "+  i+1 + " Planta:");
             nome[i] = input.next();
-            System.out.println( "\nDigite a quantidade de Plantas: ");
+            System.out.println( "Digite a quantidade de Plantas: ");
             estoque[i] = input.nextInt();
-            System.out.println("\nDigite a quantidade Ideal: ");
+            System.out.println("Digite a quantidade Ideal: ");
             quantIdeal[i] = input.nextInt();
         }
         
         while(opcao != 3)
         {
             System.out.println("\t\tMenu");
-            System.out.println("\n\n1. Vender Planta\n2. Verificar Estoque\n3. Finalizar\n\nOpcao: ");
+            System.out.println("1. Vender Planta2. Verificar Estoque3. FinalizarOpcao: ");
 
 
             switch (opcao) {
                 case 1 -> {
-                    System.out.println("Catalogo de Vendas\n\n");
+                    System.out.println("Catalogo de Vendas");
                     for (int i = 0; i < TAMANHO; i++) {
                         if (estoque[i] > 0) {
                             System.out.println(i + 1 + ". " + nome[i]);
-                            System.out.println("\t\tQuantidade em Estoque: " + estoque[i] + "\n");
+                            System.out.println("\t\tQuantidade em Estoque: " + estoque[i] + "");
                         }
 
                     }
-                    System.out.println("\nQual planta deseja comprar: ");
+                    System.out.println("Qual planta deseja comprar: ");
                     opcao = input.nextInt();
                     opcao--;
                     System.out.println("Digite a quantidade de plantas desejadas: ");
@@ -52,25 +52,25 @@ public class MainFloricultura {
                     if (qnt <= estoque[opcao]) {
                         estoque[opcao] -= qnt;
                     } else {
-                        System.out.println("\nQuantidade superior a do estoque, venda nao efetuada!\n\n");
+                        System.out.println("Quantidade superior a do estoque, venda nao efetuada!");
                     }
                 }
                 case 2 -> {
-                    System.out.println("Estoque\n\n");
+                    System.out.println("Estoque");
                     for (int i = 0; i < TAMANHO; i++) {
                         System.out.println(" " + i + 1 + ". " + nome[i]);
                         if (estoque[i] < quantIdeal[i]) {
-                            System.out.println("\nRepor Estoque, quantidade atual: " + estoque[i]);
-                            System.out.println("\nQuantidade ideal: " + quantIdeal[i]);
-                            System.out.println("\nComprar mais: " + (quantIdeal[i] - estoque[i]) + "\n");
+                            System.out.println("Repor Estoque, quantidade atual: " + estoque[i]);
+                            System.out.println("Quantidade ideal: " + quantIdeal[i]);
+                            System.out.println("Comprar mais: " + (quantIdeal[i] - estoque[i]) + "");
                         } else {
-                            System.out.println("\nQuantidade em Estoque: " + estoque[i] + "\n");
+                            System.out.println("Quantidade em Estoque: " + estoque[i] + "");
                         }
-                        System.out.println("----\n\n");
+                        System.out.println("----");
                     }
                 }
-                case 3 -> System.out.println("Finalizando Programa...\n");
-                default -> System.out.println("Opcao Invalida.\n");
+                case 3 -> System.out.println("Finalizando Programa...");
+                default -> System.out.println("Opcao Invalida.");
             }
         }
     }
